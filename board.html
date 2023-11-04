@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <!--This web page was made by:
      cavri johnson
-    05/31/2023
+    10/30/2023
 cavjohns@uat.edu-->
 <!--This is the start of the html stuff-->
 <html>
 
 <head>
+    <!--links always go in here-->
+    <!--this is the link to link html file to js resources-->
+    <script src=code.js></script>
     <!--we need a style sheet to define the styles for our page-->
     <link href="style.CSS" rel="stylesheet" type="text/css">
     <!--The title at the top of the window bar-->
@@ -17,9 +20,22 @@ cavjohns@uat.edu-->
 </head>
 <!--This is the start of the body-->
 
-<!-- i decided i want to keep the color of the bckground and text the same.-->
+<body style="background-color: lightgray">
 
-<body style="background-color: rgb(14, 150, 118);color: #000;">
+<!--this is for slide out navigation panel-->
+<div id="mySidenav" class="sidenav">
+    <!--this links it to js just incase th e link in the head does not and it also adds the close button and function-->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!--This will take you to the index page-->
+    <a href="index.html">Home</a>
+    <!--This will take you to the boards page-->
+    <a href="board.html">Boards</a>
+    <!--This will take you to the game page page-->
+    <a href="game.html">Game</a>
+     <!--This will take you to the strings page page-->
+     <a href="strings.html">strings</a>
+</div>
+
     <!--This is the header at the top of the page-->
     <header style="text-align: center;">
         <h1>Welcome to my Boards Webpage</h1>
@@ -28,17 +44,8 @@ cavjohns@uat.edu-->
         <br>
     </header>
 
-    <!--This is for navigation I put it on the right for easier access since it's closer to the scroll bar.-->
-    <nav style="text-align: right;">
-        <h2>
-            Navigation
-        </h2>
-        <!--This will take you to the index page-->
-        <a href="index.html"> Home</a><br>
-        <!--This will take you to the boards page-->
-        <a href="board.html"> Boards</a>
-    </nav>
-
+    <nav style="text-align: right;;cursor:pointer" onclick="openNav()">
+        <h2>&#9776; Navigation</h2></nav>
     <!--I decided to add this for style-->
     <h2 style="text-align: center;"> ROBOTICS AND EMBEDDED SYSTEMS DEGREE OBJECTIVES <br>
         <br>
